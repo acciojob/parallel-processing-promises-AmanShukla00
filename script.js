@@ -1,5 +1,7 @@
 const output = document.getElementById("output");
 const btn = document.getElementById("download-images-button");
+const loadingDiv = document.getElementById("loading");
+const errorDiv = document.getElementById("error");
 
 const images = [
   { url: "https://picsum.photos/id/237/200/300" },
@@ -17,9 +19,6 @@ function downloadImage(url) {
 }
 
 function downloadImages() {
-    const loadingDiv = document.getElementById('loading');
-    const errorDiv = document.getElementById('error');
-    
     loadingDiv.style.display = 'block';
     errorDiv.innerHTML = '';
     output.innerHTML = '';
